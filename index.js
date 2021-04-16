@@ -9,7 +9,7 @@ require('./models/User');
 require('./services/passport');
 
 
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true }, () => {console.log('sdasda')}); //callback is necessary
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true }, () => {console.log('MongoDB is connected')}); //callback is necessary
 
 const app = express();
 
