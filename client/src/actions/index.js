@@ -9,4 +9,11 @@ export const fetchUser = () => async dispatch => {
         })
 };
 
-// 85 video
+export const handleToken = (token) => async dispatch => {
+    const response = await axios.post('/api/stripe', token)
+    
+    dispatch({
+        type: FETCH_USER, //the same FETCH_USER cuz we need to update the number of credits the user has
+        payload: response.data
+    })
+};
